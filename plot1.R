@@ -1,6 +1,9 @@
 #############################################################################
 ##
-## plot1.R
+## plot1.R -This script creates a plot of power consumption data between
+##          1st Feb 2007 and 2nd Feb 2007.  The data is downloaded if it
+##          is not present.  The plot is stored in a .png file called
+##          plot1.png
 ##
 #############################################################################
 
@@ -73,7 +76,16 @@ if (CheckMemoryRequirements(MemReq)){
     plotData<-data[data$Date>="2007-02-01",]
     plotData<-plotData[plotData$Date<="2007-02-02",]
 
-    with(plotData,hist(Global_active_power))
+    ##########################################################################
+    ## Create the plot in a png file
+    ##########################################################################
+    png(file="plot1.png",width = 480, height = 480, units = "px")
+    with(plotData,hist(Global_active_power, 
+                       col="red",
+                       main="Global Active Power",
+                       xlab="Global Active Power(kilowatts)")
+         )
+    dev.off()
 }
 
 
