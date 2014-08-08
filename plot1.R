@@ -25,7 +25,7 @@ if (!file.exists(DataDir)){
     ## Download the file into the Create directory 
     ###########################################################################
     
-    download.file(fileUrl, 
+    download.file(FileURL, 
                   destfile = paste("./",DataDir,"/Dataset.zip",sep=""))
     
     ###########################################################################
@@ -79,6 +79,7 @@ if (CheckMemoryRequirements(MemReq)){
     ##########################################################################
     ## Create the plot in a png file
     ##########################################################################
+    print("create plot1.png file")
     png(file="plot1.png",width = 480, height = 480, units = "px")
     with(plotData,hist(Global_active_power, 
                        col="red",
