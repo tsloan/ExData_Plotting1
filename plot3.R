@@ -1,9 +1,9 @@
 #############################################################################
 ##
-## plo32.R -This script creates a plot of power consumption data between
+## plot3.R -This script creates a plot of power consumption data between
 ##          1st Feb 2007 and 2nd Feb 2007.  The data is downloaded if it
 ##          is not present.  The plot is stored in a .png file called
-##          plot1.png
+##          plot3.png
 ##
 #############################################################################
 
